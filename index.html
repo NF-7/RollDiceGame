@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Vrzi kocko ...</title>
+  </head>
+  <body>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Igralec 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Trenutni rezultat</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Igralec 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Trenutni rezultat</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice" />
+
+      <button class="btn btn--new">🔄 Nova igra</button>
+      <button class="btn btn--roll">🎲 Vrzi kocko</button>
+      <button class="btn btn--hold">📥 Shrani točke</button>
+      <button class="show-modal">📜 Pravila</button>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1 class="rules-title">📜 PRAVILA IGRE 📜</h1>
+        <p class="rules">
+          Vsakemu igralcu se meti kocke seštevajo dokler je rezultat na kocki
+          višji od 1. <br />
+          <br />
+          V kolikor je rezultat na kocki enak 1, se mu dosedanji seštevek metov,
+          ki je zapisan pod "TRENUTNI REZULTAT" izbriše, pravico do meta kocke
+          pa dobi drug igralec. <br />
+          <br />
+          V kolikor je igralec v dosedanjih metih kocke dobil večje število
+          točk, si lahko dosedanji seštevek shrani, ta pa se mu prišteje k
+          njegovemu rezultatu. V tem primeru dobi pravico meta drug igralec.
+          <br />
+          <br />
+          Zmagovalec 🏆 bo igralec, ki bo prvi dosegel 50 ali več točk.
+        </p>
+        <br />
+        <br />
+        <h3 class="creator">Igro izdelal Nejc Furh ™️</h3>
+      </div>
+      <div class="overlay hidden"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
